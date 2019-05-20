@@ -262,14 +262,14 @@ public class TextAnimator : MonoBehaviour
 
 				if (animation.rotation.use)
 				{
-					var ratio = animation.rotation.curve.Evaluate(CalcAnimationTime(time, i, animation.rotation));
-					var delta = Vector3.LerpUnclamped(animation.rotation.from, animation.rotation.to, ratio);
-					var center = Vector3.Scale(vertex2 - vertex0, animation.pivot) + vertex0;
-					var matrix = Matrix4x4.Rotate(Quaternion.Euler(delta));
-					vertex0 = matrix.MultiplyPoint(vertex0 - center) + center;
-					vertex1 = matrix.MultiplyPoint(vertex1 - center) + center;
-					vertex2 = matrix.MultiplyPoint(vertex2 - center) + center;
-					vertex3 = matrix.MultiplyPoint(vertex3 - center) + center;
+			//	var ratio = animation.rotation.curve.Evaluate(CalcAnimationTime(time, i, animation.rotation));
+			//	var delta = Vector3.LerpUnclamped(animation.rotation.from, animation.rotation.to, ratio);
+			//	var center = Vector3.Scale(vertex2 - vertex0, animation.pivot) + vertex0;
+			//	var matrix = Matrix4x4.Rotate(Quaternion.Euler(delta));
+			//	vertex0 = matrix.MultiplyPoint(vertex0 - center) + center;
+			//	vertex1 = matrix.MultiplyPoint(vertex1 - center) + center;
+			//	vertex2 = matrix.MultiplyPoint(vertex2 - center) + center;
+			//	vertex3 = matrix.MultiplyPoint(vertex3 - center) + center;
 				}
 
 				if (animation.scale.use)
